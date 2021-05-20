@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+/* Paramètres généraux */
+body {
+  font-family: "Luckiest Guy", cursive;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#footer_kahoot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+#next-button {
+  visibility: hidden;
+}
+#footer_kahoot a {
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+  transition: color 200ms ease-in;
+}
+#footer_kahoot a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#credits {
+  text-align: center;
+  font-size: 25px;
+}
+/* Bouton retour au menu */
+.return-button {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: font-size 0.5s ease-out;
+}
+.return-button:hover {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* La question */
+.question {
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 5px;
+  max-width: 80vw;
+}
+
+/* Le conteneur qui contient les boutons */
+.container-buttons {
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+}
+/* .container-buttons div {
+  width: 40vw;
+  max-height: 30vh;
+} */
+/* Boutons */
+.kahoot-button:hover {
+  cursor: pointer;
+  animation: button-smol-rotate 0.2s both;
+}
+
+.kahoot-button {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* width: 30vw; */
+  width: 35vw;
+  height: 80px;
+  background-color: #ffffff;
+  color: black;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: rgba(255, 255, 255, 0.658) 2px 1px 0px;
+  font-size: 30px;
+  box-shadow: #ffffff 10px 10px 0px;
+  animation: button-smol-rotate-reverse 0.2s both;
+  outline: none;
+  border: none;
+}
+.kahoot-button button {
+  background-color: #ffffff;
+  color: black;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: rgba(255, 255, 255, 0.658) 2px 1px 0px;
+  font-size: 30px;
+  box-shadow: #ffffff 10px 10px 0px;
+  outline: none;
+  border: none;
+  transition: background-color 200ms ease-in;
+}
+a.kahoot-button {
+  text-decoration: none;
+}
+#menu_body .kahoot-button,
+#result_body .kahoot-button {
+  height: 100%;
+}
+#result_body .kahoot-button {
+  min-width: 50vw;
+  max-width: 60vw;
+  width: 60vw;
+}
+.kahoot-button.answer {
+  color: green;
+}
+.kahoot-button.wrong {
+  color: red;
+}
+.clicked {
+  box-shadow: rgb(0, 0, 0) 5px 5px 0px, rgb(0, 0, 0) -5px -5px 0px !important;
+}
+.input-username {
+  text-align: center;
+  border: none;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-width: 30vw;
+  background-color: #ffffff;
+  color: black;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 30px;
+  box-shadow: #ffffff 10px 10px 0px;
+}
+.input-username:focus {
+  outline: none;
+}
+.question_div {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Background en fonction du thème */
+.litterature {
+  background-color: rgb(154, 76, 226);
+}
+.geography {
+  background-color: rgb(134, 191, 255);
+}
+.history {
+  background-color: rgb(197, 182, 48);
+}
+.entertainement {
+  background-color: rgb(231, 46, 185);
+}
+.sports {
+  background-color: rgb(255, 72, 0);
+}
+.science {
+  background-color: rgb(57, 185, 57);
+}
+
+/* Animations */
+@keyframes button-smol-rotate {
+  from {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  to {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes button-smol-rotate-reverse {
+  from {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+  to {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #footer_kahoot {
+    font-size: 20px;
+    letter-spacing: 1px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #footer_kahoot div {
+    margin: 5px;
+  }
+  .kahoot-button,
+  .input-username {
+    margin: 15px;
+    box-shadow: #ffffff 5px 5px 0px;
+  }
+  .score,
+  .question_number {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .kahoot-button,
+  .input-username {
+    font-size: 14px;
+    margin: 10px;
+    box-shadow: #ffffff 2px 2px 0px;
+  }
+  .clicked {
+    box-shadow: rgb(0, 0, 0) 2px 2px 0px, rgb(0, 0, 0) -2px -2px 0px !important;
+  }
+  .score,
+  .question_number {
+    font-size: 20px;
+  }
+  #footer_kahoot {
+    font-size: 14px;
+  }
+  .question {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+    max-width: 80vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  #footer_kahoot {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .return-button {
+    font-size: 17px;
+  }
+  .return-button:hover {
+    font-size: 20px;
+  }
+  .question {
+    font-size: 25px;
+  }
+  .kahoot-button,
+  .input-username {
+    margin: 7px;
+    box-shadow: #ffffff 3px 3px 0px;
+  }
+  .clicked {
+    box-shadow: rgb(0, 0, 0) 3px 3px 0px, rgb(0, 0, 0) -3px -3px 0px !important;
+  }
+  .score,
+  .question_number {
+    font-size: 15px;
+  }
+  #credits {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .question {
+    text-align: center;
+    font-size: 20px;
+  }
+}

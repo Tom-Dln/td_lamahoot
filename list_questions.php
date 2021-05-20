@@ -16,8 +16,16 @@ $_SESSION["form_action"] = 'ready';
 <!-- ----------------------------------------- -->
 
 
+<div class="row mb-5">
+    <div class="col-6 d-flex justify-content-center">
+        <a class="btn btn-light btn-lg" href="index.php" role="button">Retour Acceuil</a>
+    </div>
+    <div class="col-6 d-flex justify-content-center">
+        <a class="btn btn-light btn-lg" href="new_question.php" role="button">Ajouter une Question</a>
+    </div>
+</div>
 <h1 class="mb-5 text-center">
-    Formulaire Modifier Question
+    Liste des questions
 </h1>
 <div class="row">
     <div class="col table-responsive-sm">
